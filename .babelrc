@@ -13,6 +13,7 @@
                 "@networking":"./src/app/utils/networking",
                 "@navigation":"./src/app/navigation",
                 "@themes":"./src/app/themes",
+                "@store":"./src/app/store",
             }
           }
         ]
