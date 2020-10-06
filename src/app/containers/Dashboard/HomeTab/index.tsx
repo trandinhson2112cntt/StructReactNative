@@ -19,7 +19,7 @@ export const HomeTab = (props: any) => {
     <View style={{ flex: 1, backgroundColor: 'white', alignItems: 'center', justifyContent: 'center' }}>
       <Pressable onPress={() => { navigateTo(APP_SCREEN.APP.DETAIL_SCREEN) }}><Text>Go to details</Text></Pressable>
       <Text>Dashboard</Text>
-      <Button title="Change Theme" onPress={_changeTheme}></Button>
+      <Button title="Change Theme" onPress={() => _changeTheme}></Button>
     </View>
   );
 };
