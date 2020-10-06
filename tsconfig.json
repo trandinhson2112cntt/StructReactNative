@@ -52,6 +52,9 @@
       "@utils/*": [
         "./src/app/utils/*"
       ],
+      "@utils": [
+        "./src/app/utils/index"
+      ],
       "@networking/*": [
         "./src/app/utils/networking"
       ],

@@ -1,6 +1,6 @@
-import ThemeType from '@themes';
+import { ThemeType } from '@themes';
 
-export interface AppState {
+export interface IAppConfigState {
     internetState: boolean;
 
     profile: any;

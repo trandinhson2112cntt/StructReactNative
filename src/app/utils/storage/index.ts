@@ -1,11 +1,12 @@
 import AsyncStorage from '@react-native-community/async-storage';
+import { AsyncStorageKeys } from './keys';
 
 /**
  * Loads a string from storage.
  *
  * @param key The key to fetch.
  */
-export async function loadString(key: string) {
+export async function loadString(key: AsyncStorageKeys) {
   try {
     return await AsyncStorage.getItem(key);
   } catch {
@@ -20,7 +21,7 @@ export async function loadString(key: string) {
  * @param key The key to fetch.
  * @param value The value to store.
  */
-export async function saveString(key: string, value: string) {
+export async function saveString(key: AsyncStorageKeys, value: string) {
   try {
     await AsyncStorage.setItem(key, value);
     return true;
@@ -34,7 +35,7 @@ export async function saveString(key: string, value: string) {
  *
  * @param key The key to fetch.
  */
-export async function load(key: string) {
+export async function load(key: AsyncStorageKeys) {
   try {
     const almostThere = await AsyncStorage.getItem(key);
     return typeof almostThere === 'string' ? JSON.parse(almostThere) : null;
@@ -49,7 +50,7 @@ export async function load(key: string) {
  * @param key The key to fetch.
  * @param value The value to store.
  */
-export async function save(key: string, value: any) {
+export async function save(key: AsyncStorageKeys, value: any) {
   try {
     await AsyncStorage.setItem(key, JSON.stringify(value));
     return true;
@@ -63,10 +64,10 @@ export async function save(key: string, value: any) {
  *
  * @param key The key to kill.
  */
-export async function remove(key: string) {
+export async function remove(key: AsyncStorageKeys) {
   try {
     await AsyncStorage.removeItem(key);
-  } catch {}
+  } catch { }
 }
 
 /**
@@ -75,5 +76,5 @@ export async function remove(key: string) {
 export async function clear() {
   try {
     await AsyncStorage.clear();
-  } catch {}
+  } catch { }
 }
