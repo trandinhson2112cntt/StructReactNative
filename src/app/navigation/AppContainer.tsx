@@ -16,7 +16,7 @@ export const AppContainer = () => {
     console.log(appConfigState);
     console.log('====================================');
     useEffect(() => {
-        // dispatch(onLoadApp());           
+        dispatch(onLoadApp());           
     }, []);
     return (
         <NavigationContainer ref={navigationRef} theme={MyAppTheme[appConfigState.theme]}>

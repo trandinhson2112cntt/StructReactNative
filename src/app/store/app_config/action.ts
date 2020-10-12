@@ -22,6 +22,10 @@ export const onSetAppTheme = (payload: ThemeType) => ({
   type: Action.SET_APP_THEME,
   payload,
 });
+export const onSaveAppTheme = (payload: ThemeType) => ({
+  type: Action.SAVE_APP_THEME,
+  payload,
+});
 export const onSetAppMode = (payload: any) => ({
   type: Action.SET_APP_MODE,
   payload,

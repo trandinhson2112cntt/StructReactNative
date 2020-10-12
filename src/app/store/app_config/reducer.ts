@@ -16,7 +16,7 @@ const initialAppConfigState: IAppConfigState = {
 };
 export default (state: IAppConfigState = initialAppConfigState, action: IActionTyped) => {
     switch (action.type) {
-        case Action.SET_APP_THEME:
+        case Action.SAVE_APP_THEME:
             return {
                 ...state,
                 theme: action.payload as ThemeType
